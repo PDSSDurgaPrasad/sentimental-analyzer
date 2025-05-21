@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Sentiment Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Email Sentiment Analyzer</h1>
+        <form method="POST">
+            <input type="text" name="email" placeholder="Email" required><br>
+            <input type="password" name="password" placeholder="App Password" required><br>
+            <input type="submit" value="Analyze My Emails">
+        </form>
+
+        {% if results %}
+            <div class="result-box">
+                <h2>Analysis Results</h2>
+                <ul>
+                    {% for email in results %}
+                        <li>
+                            <strong>{{ email.subject }}</strong><br>
+                            {{ email.body }}<br>
+                            <em>Sentiment: {{ email.sentiment }}, Priority: {{ email.priority }}</em>
+                        </li>
+                        <hr>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
