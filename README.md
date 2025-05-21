@@ -20,12 +20,5 @@ A lightweight, Python-powered web application that detects emotional polarity in
 - **NLTK / TextBlob**
 - **HTML/CSS** 
 
----
 
-## 📦 Getting Started
 
-1. Clone the repo:
-
-   ```bash
-   git clone https://github.com/yourusername/sentimental-analyzer.git
-   cd sentimental-analyzer
